@@ -1,6 +1,6 @@
 export interface Context {
   worksheet: string;
-  table: any;
+  table: string;
 }
 
 export type ContextTypes = "worksheet" | "table";

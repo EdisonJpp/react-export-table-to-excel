@@ -1,8 +1,6 @@
-import { MutableRefObject } from "react";
-
 export interface UseExcel {
   filename: string;
-  tableRef: MutableRefObject<any>;
+  currentTableRef: any;
 }
 
 export interface UseExcelReturn {

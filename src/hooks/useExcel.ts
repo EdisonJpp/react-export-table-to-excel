@@ -4,7 +4,7 @@ import { UseExcel, UseExcelReturn } from "../interfaces/use-excel";
 import { Context } from "../interfaces/context";
 
 export function useDownloadExcel({
-  tableRef,
+  currentTableRef,
   filename,
 }: UseExcel): UseExcelReturn {
   function valEnv(): boolean {
@@ -14,7 +14,7 @@ export function useDownloadExcel({
       }
       return false;
     }
-    return false;
+    return true;
   }
 
   function download(fileName: string, context: Context): boolean {
@@ -29,8 +29,8 @@ export function useDownloadExcel({
   }
 
   function getTable() {
-    if (!tableRef?.current) return;
-    let cloneTable = tableRef.current.cloneNode(true);
+    if (!currentTableRef) return;
+    const cloneTable = currentTableRef.cloneNode(true);
     cloneTable.deleteRow(0);
     return cloneTable.outerHTML;
   }
@@ -40,7 +40,8 @@ export function useDownloadExcel({
 
     const table = getTable();
     const fileName = `${filename}.xls`;
-    const context = {
+
+    const context: Context = {
       worksheet: "Worksheet",
       table,
     };
