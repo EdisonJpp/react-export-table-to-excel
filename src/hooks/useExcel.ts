@@ -3,7 +3,10 @@ import * as utils from "../utils";
 import { UseExcel, UseExcelReturn } from "../interfaces/use-excel";
 import { Context } from "../interfaces/context";
 
-export function useExcel({ tableRef, filename }: UseExcel): UseExcelReturn {
+export function useDownloadExcel({
+  tableRef,
+  filename,
+}: UseExcel): UseExcelReturn {
   function valEnv(): boolean {
     if (!document) {
       if (process?.env.NODE_ENV !== "production") {
