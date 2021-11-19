@@ -2,7 +2,8 @@
   "name": "react-export-html-table-to-excel",
   "version": "1.0.0",
   "description": "It allows you to export an HTML table just by sending the table reference and the name with which you want the file to be saved",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/EdisonJpp/react-export-html-table-to-excel"
