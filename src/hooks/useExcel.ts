@@ -6,6 +6,7 @@ import { Context } from "../interfaces/context";
 export function useDownloadExcel({
   currentTableRef,
   filename,
+  sheet,
 }: UseExcel): UseExcelReturn {
   function valEnv(): boolean {
     if (!document) {
@@ -42,7 +43,7 @@ export function useDownloadExcel({
     const fileName = `${filename}.xls`;
 
     const context: Context = {
-      worksheet: "Worksheet",
+      worksheet: sheet || "Worksheet",
       table,
     };
 

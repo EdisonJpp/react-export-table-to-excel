@@ -5,9 +5,10 @@ import { useDownloadExcel } from "./hooks/useExcel";
 const DownloadTableExcel: FC<IProps> = ({
   currentTableRef,
   filename,
+  sheet,
   children,
 }) => {
-  const { onDownload } = useDownloadExcel({ currentTableRef, filename });
+  const { onDownload } = useDownloadExcel({ currentTableRef, filename, sheet });
   return <span onClick={onDownload}>{children}</span>;
 };
 
