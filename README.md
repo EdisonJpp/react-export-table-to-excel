@@ -13,7 +13,8 @@ No additional dependencies
 ## Installation
 
 ```
-npm install --save react-export-table-to-excel
+npm install react-export-table-to-excel
+yarn add react-export-table-to-excel
 ```
 
 ## Features

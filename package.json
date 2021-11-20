@@ -1,5 +1,5 @@
 {
-  "name": "react-export-html-table-to-excel",
+  "name": "react-export-table-to-excel",
   "version": "1.0.0",
   "description": "It allows you to export an HTML table just by sending the table reference and the name with which you want the file to be saved",
   "main": "lib/index.js",
@@ -19,9 +19,8 @@
     "@babel/preset-typescript": "^7.16.0",
     "@types/node": "^16.11.9",
     "@types/react": "^17.0.35",
+    "react": "^17.0.2",
     "typescript": "^4.5.2"
   },
-  "dependencies": {
-    "react": "^17.0.2"
-  }
+  "dependencies": {}
 }
