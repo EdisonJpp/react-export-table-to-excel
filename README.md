@@ -55,7 +55,7 @@ const Test = () =>  {
                     currentTableRef={tableRef.current}
                 >
 
-                   <Button> Export excel </Button>
+                   <button> Export excel </button>
 
                 </DownloadTableExcel>
 
@@ -112,7 +112,7 @@ const Test = () =>  {
 
         return (
             <div>
-                <Button onClick={onDownload}> Export excel </Button>
+                <button onClick={onDownload}> Export excel </button>
 
                 <table  ref={tableRef}>
                     <tr>
