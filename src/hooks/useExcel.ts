@@ -30,7 +30,10 @@ export function useDownloadExcel({
   }
 
   function getTable() {
-    if (!currentTableRef) return;
+    if (!currentTableRef) {
+      console.error("currentTableRef not found");
+      return;
+    }
     const cloneTable = currentTableRef.cloneNode(true);
     cloneTable.deleteRow(0);
     return cloneTable.outerHTML;
