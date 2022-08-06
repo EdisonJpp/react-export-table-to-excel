@@ -16,3 +16,5 @@ export const template =
   "lWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/>" +
   "</x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></" +
   "xml><![endif]--></head><body>{table}</body></html>";
+
+export { default as createTable } from "./create-table";

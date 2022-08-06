@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { IProps } from "./interfaces/react-export-table-excel";
 import { useDownloadExcel } from "./hooks/useExcel";
+import { downloadExcel } from "./lib";
 
 const DownloadTableExcel: FC<IProps> = ({
   currentTableRef,
@@ -12,4 +13,4 @@ const DownloadTableExcel: FC<IProps> = ({
   return <span onClick={onDownload}>{children}</span>;
 };
 
-export { DownloadTableExcel, useDownloadExcel };
+export { DownloadTableExcel, useDownloadExcel, downloadExcel };

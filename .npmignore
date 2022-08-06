@@ -1,1 +1,3 @@
-src/dev/
+.src/
+.node_modules/
+.gitignore

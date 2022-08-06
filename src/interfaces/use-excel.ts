@@ -4,6 +4,6 @@ export interface UseExcel {
   currentTableRef: any;
 }
 
-export interface UseExcelReturn {
+export interface ExcelReturn {
   onDownload: () => boolean;
 }
