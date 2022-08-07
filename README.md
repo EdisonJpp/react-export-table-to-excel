@@ -10,7 +10,9 @@ Provides a client side generation of Excel (.xls) file from HTML table element.
 
 ---
 
-#### [ReactExportTableToExcel's samples ( CodeSandbox )](https://codesandbox.io/s/react-export-table-to-excel-sample-dvzkms)
+#### [ReactExportTableToExcel's samples in React.js ( CodeSandbox )](https://codesandbox.io/s/react-export-table-to-excel-sample-dvzkms)
+
+#### [ReactExportTableToExcel's samples in Next.js ( CodeSandbox )](https://codesandbox.io/s/react-export-table-to-excel-next-js-yzl74q)
 
 ---
 
