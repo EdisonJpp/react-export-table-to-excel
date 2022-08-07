@@ -1,5 +1,5 @@
 import { UseExcel } from "../interfaces/use-excel";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { excel } from "../lib";
 
 export function useDownloadExcel({
@@ -7,8 +7,15 @@ export function useDownloadExcel({
   filename,
   sheet,
 }: UseExcel) {
-  return useMemo(
-    () => excel({ currentTableRef, filename, sheet }),
-    [currentTableRef, filename, sheet]
-  );
+  const [payload, setPayload] = useState({} as UseExcel);
+
+  useEffect(() => {
+    setPayload({
+      currentTableRef,
+      filename,
+      sheet,
+    });
+  }, [currentTableRef, filename, sheet]);
+
+  return useMemo(() => excel(payload), [payload]);
 }

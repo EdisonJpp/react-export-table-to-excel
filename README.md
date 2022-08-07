@@ -6,7 +6,11 @@ Provides a client side generation of Excel (.xls) file from HTML table element.
 
 ---
 
-No additional dependencies
+#### No additional dependencies
+
+---
+
+#### [ReactExportTableToExcel's samples ( CodeSandbox )](https://codesandbox.io/s/react-export-table-to-excel-sample-dvzkms)
 
 ---
 
@@ -24,6 +28,7 @@ yarn add react-export-table-to-excel
 - Set desired .xls filename and sheet
 - Hook to export to excel
 - Component to export to excel
+- Method to export to excel
 
 ## Options
 
@@ -165,7 +170,7 @@ const Test = () => {
   const header = ["Firstname", "Lastname", "Age"];
   const body = [
     ["Edison", "Padilla", 14],
-    ["Cheila", "Padilla", 56],
+    ["Cheila", "Rodrigez", 56],
   ];
 
   /**
@@ -176,7 +181,7 @@ const Test = () => {
    */
   const body2 = [
     { firstname: "Edison", lastname: "Padilla", age: 14 },
-    { firstname: "Cheila", lastname: "Padilla", age: 56 },
+    { firstname: "Cheila", lastname: "Rodrigez", age: 56 },
   ];
 
   function handleDownloadExcel() {
@@ -203,8 +208,8 @@ const Test = () => {
             ))}
           </tr>
 
-          {body.map((item) => (
-            <tr>
+          {body.map((item, i) => (
+            <tr key={i}>
               {item.map((it) => (
                 <td key={it}>{it}</td>
               ))}
