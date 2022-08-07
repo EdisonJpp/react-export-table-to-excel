@@ -21,7 +21,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "start:dev": "react-scripts start",
-    "publish": "npm publish --access public"
+    "publish:npm": "npm publish --access public"
   },
   "author": "Edison J. Padilla && Enmanuel Santana",
   "license": "ISC",
